@@ -52,6 +52,7 @@
     </nav>
 </header>
 
+{% if block('carousel') is defined%}
 <main role="main">
 
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -101,6 +102,9 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+    {% endif %}
+
+ <div class="container marketing{% if block('carousel') is not defined %}mt-5{% endif %}">
 
 {% block content %}
 
